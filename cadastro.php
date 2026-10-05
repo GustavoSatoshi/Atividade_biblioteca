@@ -36,7 +36,7 @@ if (isset($_GET["erro"]) && $_GET["erro"] && $_GET ["erro"] === "email_cadastrad
     </div>
     <a href="login.php" class="btn btn-voltar">voltar para login</a>
     <div class="dica-navegacao">
-        <strong> fluxo:</strong> Cadastro → login → menu → painel → gerenciar livros
+        <strong> fluxo:</strong> Cadastro → login → menu → painel → cadastrar ou listar livros
          </div>
         </div>
 </body>
