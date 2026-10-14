@@ -10,7 +10,7 @@ session_start();
 //cabeçaçhos HTTP para impedir cache do navegador
  //isso evita que o usuario acesse a pagina protegida usando o botão voltar do navegador
 
- header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
 
