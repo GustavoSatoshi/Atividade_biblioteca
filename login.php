@@ -17,7 +17,7 @@
             
         }
         ?>
-        <form action="verificar_login.php" method="POST">
+        <form action="autenticar.php" method="POST">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu email" required>
