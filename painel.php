@@ -20,7 +20,7 @@ include ("verificar_sessao.php");
        <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
        <p class="subtitulo">Bem-vindo ao painel da biblioteca!,Escolha uma opção abaixo:</p>
        <div class="painel-cards">
-        <a href="cadastar_livro.php" class="card-link">Cadastrar livro
+        <a href="cadastrar_livro.php" class="card-link">Cadastrar livro
  
  
         </a>
