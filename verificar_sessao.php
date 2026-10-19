@@ -1,23 +1,27 @@
 <?php
-
-//verificar_sessao.php
-//verifica se o usuario esta logado, caso não esteja redireciona para a
-//pagina de login
-
-//inicia sessa odo usuarrio ou retoma a sessao existente
+ 
+//verificar_sesao.php
+// Arquivo incluído nas páginas restritas do sistema.
+// Garante que apenas usuários logados possam acessar o conteúdo.
+ 
+// Inicia a sessão do usuário (ou retoma uma sessão já existente)
 session_start();
-
-//cabeçaçhos HTTP para impedir cache do navegador
- //isso evita que o usuario acesse a pagina protegida usando o botão voltar do navegador
-
-header("Cache-Control: no-store, no-cache, must-revalidate");
+ 
+// Cabeçalhos em HTTP que impedem o navegador de guardar a página
+// em cache.
+// Isso evita que usuário volte ao painel após fazer o logout.
+ 
+header("cache-control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
-
-//verifica se a variavel de sesão 'nome' existe
-// se não existir, significa que o usuario não esta logado
-if (!isset($_SESSION['nome'])) {
-    //redireciona para a pagina de login
+ 
+// Verifica se a variável de sessão 'nome' existe.
+// Se não existir, o usuário não está logado.
+ 
+if(!isset($_SESSION['nome'])) {
+    // header() redireciona o navegador para outra página.
     header("Location: login.php");
+    // exit() encerra o script para garantir que nada mais
+    // seja executado
     exit();
 }
