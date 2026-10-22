@@ -12,7 +12,7 @@ include("conexao.php");
  
 // Consulta SQL que busca todos os livros databela.
 $sql = "SELECT * FROM livros";
- 
+  
 // Executa a consulta e guarda o resultado
 $resultado = mysqli_query($conexao, $sql);
  
