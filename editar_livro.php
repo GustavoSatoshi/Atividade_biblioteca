@@ -54,14 +54,16 @@ $livro = mysqli_fetch_assoc($resultado);
 
         <div class="form-group">
             <label for="status">Status:</label>
-            <input type="text" id="status" name="status" value="<?php echo $livro['status']; ?>" required>
-            <option value="disponivel"<?php if ($livro['status'] == 'disponivel') echo ' selected'; ?>>Disponível</option>
-            <option value="emprestado"<?php if ($livro['status'] === 'emprestado') echo ' selected'; ?>>Emprestado</option>
-
+            <select id="status" name="status" required>
+                <option value="disponivel"<?php if ($livro['status'] == 'disponivel') echo ' selected'; ?>>Disponível</option>
+                <option value="emprestado"<?php if ($livro['status'] === 'emprestado') echo ' selected'; ?>>Emprestado</option>
+            </select>
         </div>
         
-        <button type="submit">Atualizar</button>
+        <button type="submit" class="btn btn-block">Atualizar</button>
+
      </form>
+     <a href="listar_livro.php" class="btn btn-voltar">voltar para listagem</a>
     </div>
 </body>
 </html>
