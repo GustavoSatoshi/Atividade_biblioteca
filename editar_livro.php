@@ -55,6 +55,9 @@ $livro = mysqli_fetch_assoc($resultado);
         <div class="form-group">
             <label for="status">Status:</label>
             <input type="text" id="status" name="status" value="<?php echo $livro['status']; ?>" required>
+            <option value="disponivel"<?php if ($livro['status'] == 'disponivel') echo ' selected'; ?>>Disponível</option>
+            <option value="emprestado"<?php if ($livro['status'] === 'emprestado') echo ' selected'; ?>>Emprestado</option>
+
         </div>
         
         <button type="submit">Atualizar</button>
