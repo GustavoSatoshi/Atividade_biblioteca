@@ -53,8 +53,8 @@ $livro = mysqli_fetch_assoc($resultado);
         </div>
 
         <div class="form-group">
-            <label for="ano">Ano:</label>
-            <input type="number" id="ano" name="ano" value="<?php echo $livro['ano']; ?>" required>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" value="<?php echo $livro['status']; ?>" required>
         </div>
         
         <button type="submit">Atualizar</button>
