@@ -25,6 +25,7 @@ $livro = mysqli_fetch_assoc($resultado);
 
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,38 +33,44 @@ $livro = mysqli_fetch_assoc($resultado);
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <div class="container">
-       <h1>Editar Livro</h1>
-       <p class="subtitulo">
-        altere os dados do livro e clique em atualizar
-       </p>
-    <!-- Formulario envia os dados para atualizar_livro.php -->
-     <form action="atualizar_livro.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $livro['id']; ?>">
+        <h1>Editar Livro</h1>
+        <p class="subtitulo">
+            altere os dados do livro e clique em atualizar
+        </p>
+        <!-- Formulario envia os dados para atualizar_livro.php -->
+        <form action="atualizar_livro.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $livro['id']; ?>">
 
-        <div class="form-group">
-            <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo" value="<?php echo $livro['titulo']; ?>" required>
-        </div>
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" value="<?php echo $livro['titulo']; ?>" required>
+            </div>
 
-        <div class="form-group">
-            <label for="autor">Autor:</label>
-            <input type="text" id="autor" name="autor" value="<?php echo $livro['autor']; ?>" required>
-        </div>
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" value="<?php echo $livro['autor']; ?>" required>
+            </div>
 
-        <div class="form-group">
-            <label for="status">Status:</label>
-            <select id="status" name="status" required>
-                <option value="disponivel"<?php if ($livro['status'] == 'disponivel') echo ' selected'; ?>>Disponível</option>
-                <option value="emprestado"<?php if ($livro['status'] === 'emprestado') echo ' selected'; ?>>Emprestado</option>
-            </select>
-        </div>
-        
-        <button type="submit" class="btn btn-block">Atualizar</button>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="disponivel" <?php if ($livro['status'] == 'disponivel')
+                        echo ' selected'; ?>>Disponível
+                    </option>
+                    <option value="emprestado" <?php if ($livro['status'] === 'emprestado')
+                        echo ' selected'; ?>>
+                        Emprestado</option>
+                </select>
+            </div>
 
-     </form>
-     <a href="listar_livro.php" class="btn btn-voltar">voltar para listagem</a>
+            <button type="submit" class="btn btn-block">Atualizar</button>
+
+        </form>
+        <a href="listar_livro.php" class="btn btn-voltar">voltar para listagem</a>
     </div>
 </body>
+
 </html>

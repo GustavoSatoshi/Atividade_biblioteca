@@ -3,7 +3,7 @@
 include("verificar_sessao.php");
 include("conexao.php");
 $id = $_POST['id'];
-$titulo = $_POST['titulo'];     
+$titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
 $status = $_POST['status'];
 
